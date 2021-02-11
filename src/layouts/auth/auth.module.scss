@@ -1,0 +1,75 @@
+@import "../../assets/scss/utils/responsiveness";
+
+.auth-layout__wrapper {
+  background: #fff;
+  position: relative;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+
+  .auth-layout__sidebar-left {
+    background-color: #7E51FF;
+    width: 360px;
+    flex: 0 0 360px;
+    max-width: 360px;
+    min-height: 100%;
+    max-height: 100vh;
+    padding: 30px;
+    overflow: auto;
+    position: sticky;
+    top: 0;
+    color: #fff;
+
+    .auth-stories__wrapper {
+      margin-top: 55px;
+
+      .auth-stories__list {
+        margin-top: 55px;
+        h1 {
+          font-size: 32px;
+          color: #fff;
+          letter-spacing: 0;
+          line-height: 32px;
+          margin-bottom: 15px;
+          display: block;
+        }
+        p {
+          font-size: 14px;
+          line-height: 18px;
+          font-weight: 400;
+          color: #fff;
+          letter-spacing: 0;
+          max-width: 270px;
+          display: block;
+        }
+        .auth-stories__list-image {
+          margin-top: 70px;
+          height: auto;
+          img {
+            height: auto!important;
+            max-height: 250px!important;
+          }
+        }
+      }
+    }
+
+    .auth-sidebar__footer {
+      position: absolute;
+      bottom: 30px;
+      font-size: 14px;
+      color: #fff;
+      letter-spacing: 0;
+      line-height: 24px;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .auth-layout__form {
+    padding: 30px;
+    width: 100%;
+    overflow: auto;
+  }
+}

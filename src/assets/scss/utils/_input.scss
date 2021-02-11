@@ -1,0 +1,29 @@
+.MuiInputLabel-root {
+  font-size: 13px !important;
+}
+
+.MuiInputBase-input { 
+  height: auto !important;
+}
+
+.MuiInputLabel-root.Mui-focused {
+  color: #fa4a84 !important;
+}
+
+.MuiFilledInput-root {
+  background: #f4f8fb !important;
+  &:before {
+    background: #e0e2ec !important;
+    height: 1px;
+    border: 0 !important;
+  }
+  input {
+    font-size: 14px !important;
+    color: #1c1335 !important;
+  }
+}
+.MuiFilledInput-underline:after {
+  border: 0 !important;
+  height: 2px !important;
+  background: linear-gradient(270deg ,#00d2ff -8.34%,#7e51ff 50.93%,#fa4a84 106.85%) !important;
+}
