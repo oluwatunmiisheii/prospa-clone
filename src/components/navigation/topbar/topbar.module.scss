@@ -1,0 +1,17 @@
+.topbar__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  border-bottom: 1px solid #edf0f3;
+  background: #fff;
+  min-height: 81px;
+  .current-page__name {
+    line-height: 0;
+    color: #8397AB;
+  }
+  .topbar-content__right {
+    display: flex;
+    align-items: center;
+  }
+}

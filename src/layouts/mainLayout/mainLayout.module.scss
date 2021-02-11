@@ -1,0 +1,11 @@
+.navigation-wrapper{
+  display: flex;
+  .content-body {
+    background: #F4F8FB;
+    min-height: 100vh;
+    width: 100%;
+    .main-content {
+      padding: 40px 80px;
+    }
+  }
+}
