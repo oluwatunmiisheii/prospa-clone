@@ -1,0 +1,22 @@
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .user-info {
+    h4 {
+      font-size: 24px;
+      color: #1b003b;
+      font-weight: 500;
+    }
+    p {
+      font-size: 15px;
+      color: #8397ab;
+      span {
+        text-decoration: underline;
+        color: #fa4a84;
+        cursor: pointer;
+      }
+    }
+  }
+}

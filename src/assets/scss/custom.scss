@@ -26,3 +26,16 @@
 .MuiAccordion-root:before {
   background-color: transparent !important;
 }
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+.MuiPopover-paper  {
+  width: 250px !important;
+  top: 75px !important;
+  max-width: calc(100% - 6px);
+}
