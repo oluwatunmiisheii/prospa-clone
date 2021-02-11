@@ -1,0 +1,84 @@
+$widths: (10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
+$heights: (10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
+$spaceamounts: (1, 2, 3, 4, 5);
+$spacer: (0.25rem, 0.5rem, 1rem, 1.5rem, 3rem);
+
+// width loop
+@each $width in $widths {
+  .w-#{$width} {
+    width: #{$width + '%'} !important;
+  }
+}
+
+// height loop
+@each $height in $heights {
+  .h-#{$height} {
+    height: #{$height + '%'} !important;
+  }
+
+}
+
+
+
+// Margin and Padding
+@each $space in $spaceamounts {
+  $i: index($spaceamounts, $space);
+
+  // margin
+  .m-#{$i} {
+    margin: nth($spacer, $i) !important;
+  }
+
+  .my-#{$space} {
+    margin: nth($spacer, $i) 0 !important;
+  }
+
+  .mx-#{$space} {
+    margin: 0 nth($spacer, $i) !important;
+  }
+
+  .ml-#{$space} {
+    margin-left: nth($spacer, $i) !important;
+  }
+
+  .mr-#{$space} {
+    margin-right: nth($spacer, $i) !important;
+  }
+
+  .mt-#{$space} {
+    margin-top: nth($spacer, $i) !important;
+  }
+
+  .mb-#{$space} {
+    margin-bottom: nth($spacer, $i) !important;
+  }
+
+  // padding
+  .p-#{$space} {
+    padding: nth($spacer, $i) !important;
+  }
+
+  .py-#{$space} {
+    padding: nth($spacer, $i) 0 !important;
+  }
+
+  .px-#{$space} {
+    padding: 0 nth($spacer, $i) !important;
+  }
+
+  .pl-#{$space} {
+    padding-left: nth($spacer, $i) !important;
+  }
+
+  .pr-#{$space} {
+    padding-right: nth($spacer, $i) !important;
+  }
+
+  .pt-#{$space} {
+    padding-top: nth($spacer, $i) !important;
+  }
+
+  .pb-#{$space} {
+    padding-bottom: nth($spacer, $i) !important;
+  }
+}

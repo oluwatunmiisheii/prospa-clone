@@ -1,0 +1,19 @@
+@mixin flexed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexed-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flexed {
+  @include flexed()
+}
+
+.flexed-between {
+  @include flexed-between()
+}
