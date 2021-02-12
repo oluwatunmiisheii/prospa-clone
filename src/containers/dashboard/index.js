@@ -103,15 +103,15 @@ const DashBoard = () => {
             <div className={classes["graph-details"]}>
               <h4 className={classes["graph-title"]}>June Summary</h4>
               <Grid container spacing={3}>
-                <Grid item xs={3}>
+                <Grid item xs={4}>
                   <h5 className={classes["account-breakdown__title"]}>Money in</h5>
                   <h5 className={classes["account-breakdown__amount"]}>N 5,650,000</h5>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={4}>
                   <h5 className={classes["account-breakdown__title"]}>Money out</h5>
                   <h5 className={classes["account-breakdown__amount"]}>N 5,650,000</h5>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={4}>
                   <h5 className={classes["account-breakdown__title"]}>Difference</h5>
                   <h5 className={classes["account-breakdown__amount"]}>N 5,650,000</h5>
                 </Grid>

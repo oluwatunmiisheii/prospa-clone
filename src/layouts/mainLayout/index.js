@@ -9,7 +9,6 @@ const MainLayout = ({children}) => {
   return ( 
     <MobileSidebar
       isOpen={isOpen}
-      onClickAway={() => setIsOpen(false)}
       setIsOpen={() => setIsOpen(true)}
     >
       <div className={classes["navigation-wrapper"]}>
