@@ -3,13 +3,13 @@ import classes from './mainLayout.module.scss'
 import TopBar from './../../components/navigation/topbar/index';
 import MobileSidebar from './../../components/navigation/sidebar/mobileSidebar';
 import DesktopSideBar from '../../components/navigation/sidebar/desktopSidebar';
-import { isMobile } from "react-device-detect";
 
 const MainLayout = ({children}) => {
   const [isOpen, setIsOpen] = useState(false);
   return ( 
     <MobileSidebar
       isOpen={isOpen}
+      onClickAway={() => setIsOpen(false)}
       setIsOpen={() => setIsOpen(true)}
     >
       <div className={classes["navigation-wrapper"]}>
