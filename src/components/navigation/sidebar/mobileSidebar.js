@@ -1,9 +1,8 @@
 import React from 'react';
 import Sidebar from "react-sidebar";
 import SideBarContent from "./sidebarContent"
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 
-const MobileSidebar = ({isOpen, setIsOpen, children, onClickAway}) => {
+const MobileSidebar = ({isOpen, setIsOpen, children}) => {
   const styles = {
     root: {
       position: "absolute",
@@ -57,17 +56,15 @@ const MobileSidebar = ({isOpen, setIsOpen, children, onClickAway}) => {
     },
   };
   return (
-    <ClickAwayListener onClickAway={onClickAway}>
-      <Sidebar
-        sidebar={<SideBarContent />}
-        open={isOpen}
-        onSetOpen={setIsOpen}
-        styles={styles}
-        pullRight={false}
-      >
-        {children}
-      </Sidebar>
-    </ClickAwayListener>
+    <Sidebar
+      sidebar={<SideBarContent />}
+      open={isOpen}
+      onSetOpen={setIsOpen}
+      styles={styles}
+      pullRight={false}
+    >
+      {children}
+    </Sidebar>
   );
 }
  
