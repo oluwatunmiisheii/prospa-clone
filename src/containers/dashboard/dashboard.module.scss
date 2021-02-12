@@ -149,3 +149,24 @@
     }
   } 
 }
+
+.graph-details {
+  margin-bottom: 30px;
+  .graph-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1C1335;
+    padding: 20px 0 30px;
+  }
+  .account-breakdown__title {
+    font-size: 14px;
+    margin-bottom: 2px;
+    color: #8397AB;
+    font-weight: 500;
+  }
+  .account-breakdown__amount {
+    font-size: 14px;
+    color: #1C1335;
+    font-weight: 500;
+  }
+}

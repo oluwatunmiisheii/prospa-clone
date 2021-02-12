@@ -13,6 +13,7 @@ import BankChargesImage from "../../assets/images/bank-charges.png"
 import MarketingImage from "../../assets/images/marketing.png"
 import InternetImage from "../../assets/images/internet.png"
 import BankIcon from "../../assets/images/bank-icon.png"
+import {Line} from 'react-chartjs-2';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,6 +26,21 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
 }));
+
+const state = {
+  labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUNE', 'JUL', 'AUG'],
+  datasets: [
+    {
+      label: 'Rainfall',
+      fill: true,
+      lineTension: 0.5,
+      backgroundColor: 'rgba(250, 74, 132, 0.26)',
+      borderColor: 'red',
+      borderWidth: 2,
+      data: [4.8, 9, 11, 12, 13, 9, 6]
+    }
+  ]
+}
 
 const DashBoard = () => {
   const styles = useStyles();
@@ -84,18 +100,37 @@ const DashBoard = () => {
         {/* analytics summary */}
         <Grid item xs={12} md={7}>
           <Paper className={styles.paper}>
-            <div className={`mb-5 ${classes["account-details__top"]}`}>
-              <div>
-                <h4 className={classes["account-type"]}>CURRENT ACCOUNT</h4>
-                <p className={classes["account-details"]}>PROVIDUS BANK - 9906533917</p>
-              </div>
-              <div>
-                <img src={CurrentAccountImage} alt="current account image" />
-              </div>
+            <div className={classes["graph-details"]}>
+              <h4 className={classes["graph-title"]}>June Summary</h4>
+              <Grid container spacing={3}>
+                <Grid item xs={3}>
+                  <h5 className={classes["account-breakdown__title"]}>Money in</h5>
+                  <h5 className={classes["account-breakdown__amount"]}>N 5,650,000</h5>
+                </Grid>
+                <Grid item xs={3}>
+                  <h5 className={classes["account-breakdown__title"]}>Money out</h5>
+                  <h5 className={classes["account-breakdown__amount"]}>N 5,650,000</h5>
+                </Grid>
+                <Grid item xs={3}>
+                  <h5 className={classes["account-breakdown__title"]}>Difference</h5>
+                  <h5 className={classes["account-breakdown__amount"]}>N 5,650,000</h5>
+                </Grid>
+              </Grid>
             </div>
-            <div className={classes["account-details__bottom"]}>
-              N814,800.<span>45</span>
-            </div>
+            <Line
+              data={state}
+              options={{
+                title:{
+                  display:false,
+                  text:'Average Rainfall per month',
+                  fontSize:20
+                },
+                legend:{
+                  display:false,
+                  position:'right'
+                }
+              }}
+            />
           </Paper>
         </Grid>
         
