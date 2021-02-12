@@ -1,9 +1,19 @@
+@import "../../assets/scss/utils/responsiveness";
+
 .page-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
+  @include mobile {
+    flex-direction: column;
+    align-items: baseline;
+  }
+
   .user-info {
+    @include mobile {
+      margin-bottom: 15px;
+    }
     h4 {
       font-size: 24px;
       color: #1b003b;
@@ -11,7 +21,7 @@
     }
     p {
       font-size: 15px;
-      color: #8397ab;
+      color: #1C1335;
       span {
         text-decoration: underline;
         color: #fa4a84;
@@ -19,4 +29,123 @@
       }
     }
   }
+}
+
+.account-details__top {
+  display: flex;
+  justify-content: space-between;
+  .account-type {
+    text-transform: capitalize;
+    font-size: 14px;
+    color: #1C1335;
+    font-weight: 500;
+  }
+  .account-details {
+    color: #8397AB;
+    font-size: 13px;
+    font-weight: 500;
+    padding-top: 5px;
+  }
+}
+
+.account-details__bottom {
+  font-size: 36px;
+  color: #1C1335;
+  span {
+    font-size: 20px;
+  }
+}
+
+.analytics-title {
+  color: #1C1335;
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 30px;
+}
+
+.cash-outflow__analytics {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 30px;
+
+  .analytics-name__image {
+    display: flex;
+    align-items: center;
+    flex-basis: 50%;
+    .icon-box {
+      height: 30px;
+      width: 30px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    p {
+      color: #8397AB;
+      font-size: 14px;
+      margin-left: 10px;
+    }
+  }
+
+  .analytics-progress__indicator {
+    flex-basis: 50%;
+    .indicator-text {
+      font-size: 14px;
+    }
+  }
+}
+
+.recent-transactions__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .recent-transaction__title {
+    font-size: 16px;
+    color: #1C1335;
+    font-weight: 500;
+  }
+}
+.transaction-list {
+  .transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+   &:not(:last-child) {
+     border-bottom: 1px solid #D8D8D8;
+   }
+   .transaction-image__title {
+     display: flex;
+     flex-basis: 70%;
+     align-items: center;
+     .transaction-title {
+        color: #1C1335;
+        font-size: 15pxx;
+        font-weight: 500;
+      }
+     .transaction-date {
+      color: #8397AB;
+      margin-top: 3px;
+      font-size: 13px;
+     }
+     .icon-box {
+        height: 32px;
+        width: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #F4F8FB;
+        border-radius: 100%;
+        margin-right: 14px;
+      }
+    }
+
+    .tranasaction-amount {
+      font-size: 15px;
+      font-weight: 500;
+      color: #1C1335;
+    }
+  } 
 }

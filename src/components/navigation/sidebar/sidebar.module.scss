@@ -1,16 +1,16 @@
 .sidebar-wrapper {
-  min-height: 700px;
   height: 100vh;
+  position: fixed;
   overflow: auto;
   width: 300px;
   background-color: #fff;
-  box-shadow: 0 2px 22px rgba(131, 151, 171, 0.24);
+  box-shadow: 0 19px 38px 0 rgba(0, 0, 0, 0.04);
+
   .business-info {
     padding: 20px 30px;
     border-bottom: 1px solid #edf0f3;
     .business-info__inner {
       display: flex;
-      align-items: center;
       justify-content: space-between;
       width: 100%;
       .user-initials {
@@ -45,5 +45,28 @@
         max-width: 130px;
       }
     }
+  }
+
+  .sidebar-links {
+    margin: 30px;
+    .link {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      margin: 30px 0;
+      color: #8397AB;
+      img {
+        padding-right: 16px;
+      }
+    }
+    .active-link {
+      color: #FA4A84;
+    }
+  }
+
+  .sidebar-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
   }
 }

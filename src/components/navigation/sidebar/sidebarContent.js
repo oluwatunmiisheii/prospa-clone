@@ -3,8 +3,12 @@ import classes from './sidebar.module.scss';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import TransferAlt from "../../../assets/images/transfer-alt.png";
+import InvoiceImage from "../../../assets/images/invoice.png";
+import ManagementImage from "../../../assets/images/management.png";
+import AccountPinkImage from "../../../assets/images/account-pink.png";
 
-const SideBar = () => {
+const SideBarContent = ({extraClass}) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -16,7 +20,7 @@ const SideBar = () => {
   };
 
   return ( 
-    <div className={classes["sidebar-wrapper"]}>
+    <div className={`${classes["sidebar-wrapper"]} ${extraClass}`}>
      <div className={classes["business-info"]}>
       <Button 
         aria-controls="simple-menu" 
@@ -57,8 +61,38 @@ const SideBar = () => {
         <MenuItem onClick={handleClose} style={{color: "#8397ab", fontSize: '14px'}}>Business NAme 3</MenuItem>
       </Menu>
      </div>
+     <div className={classes["sidebar-links"]}>
+        <div className={` ${classes["link"]} ${classes["active-link"]}`}>
+          <img src={AccountPinkImage} />
+          Accounts
+        </div>
+        <div className={classes["link"]}>
+          <img src={TransferAlt} />
+          Transfer
+        </div>
+        <div className={classes["link"]}>
+          <img src={InvoiceImage} />
+          Invoice
+        </div>
+        <div className={classes["link"]}>
+          <img src={ManagementImage} />
+          Management
+        </div>
+        <div className={classes["link"]}>
+          <img src={ManagementImage} />
+          Security
+        </div>
+        <div className={classes["link"]}>
+          <img src={ManagementImage} />
+          Support
+        </div>
+     </div>
+     <div className={classes["sidebar-footer"]}>
+       <img src="https://getprospa.com/static/icons/prospa-logo3.svg" />
+     </div>
     </div>
+    
   );
 }
  
-export default SideBar;
+export default SideBarContent;

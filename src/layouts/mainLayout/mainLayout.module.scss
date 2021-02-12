@@ -1,11 +1,19 @@
+@import "../../assets/scss/utils/responsiveness";
 .navigation-wrapper{
   display: flex;
   .content-body {
     background: #F4F8FB;
     min-height: 100vh;
     width: 100%;
+    margin-left: 300px;
+    @include mobile {
+      margin-left: 0;
+    }
     .main-content {
       padding: 40px 80px;
+      @include mobile {
+        padding: 30px 15px; 
+      }
     }
   }
 }

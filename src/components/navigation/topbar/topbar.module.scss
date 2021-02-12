@@ -1,3 +1,4 @@
+@import "../../../assets/scss/utils/responsiveness";
 .topbar__wrapper {
   display: flex;
   justify-content: space-between;
@@ -6,6 +7,9 @@
   border-bottom: 1px solid #edf0f3;
   background: #fff;
   min-height: 81px;
+  @include mobile {
+    padding: 20px 15px;
+  }
   .current-page__name {
     line-height: 0;
     color: #8397AB;
